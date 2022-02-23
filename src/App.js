@@ -1,4 +1,4 @@
-import About from "./components/About/About";
+import About from "./components/About/about";
 import Intro from "./components/intro/intro"
 function App() {
   return (
