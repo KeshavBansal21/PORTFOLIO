@@ -1,0 +1,19 @@
+.nav-comps{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 50px;
+    width: 100%;
+    background-color:greenyellow;
+    
+}
+.nav-comp1{
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+.nav-comp2{
+    font-weight: bold;
+    margin-right: 100px;
+
+}
