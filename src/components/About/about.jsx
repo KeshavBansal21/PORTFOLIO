@@ -1,4 +1,4 @@
-import './about.css';
+import './about.scss';
 import Award from "../../img/award.png";
 const About = () => {
   return (

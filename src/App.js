@@ -5,6 +5,8 @@ import Intro from "./components/intro/intro";
 import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import ProductList from "./components/productList/ProductList";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Intro />}></Route>
           <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/product" element={<ProductList/>}></Route>
+          <Route exact path="/contact" element={<Contact/>}></Route>
         </Routes>
       </BrowserRouter>
     </Provider>
