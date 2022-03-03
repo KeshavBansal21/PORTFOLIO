@@ -2,11 +2,11 @@ import "./contact.scss";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import Address from "../../img/address.png";
-import { useRef } from "react";
+import { useRef  , useState} from "react";
 import emailjs from "emailjs-com";
 const Contact = () => {
   const formRef = useRef();
-//   const [done , setdone]
+  const [done , setdone] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +21,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setdone(true);
         },
         (error) => {
           console.log(error.text);
@@ -49,7 +50,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="c-right">
-          <p className="c-desc">
+          <p className="c-dec">
             <b>What’s your story?</b> Get in touch. Always available for
             freelancing if the right project comes along. me.
           </p>
@@ -63,6 +64,7 @@ const Contact = () => {
             <input type="text" placeholder="Email" name="user_email"></input>
             <textarea rows="5" placeholder="Message" name="message" />
             <button>Submit</button>
+            {done && "Thank You"}
           </form>
         </div>
       </div>

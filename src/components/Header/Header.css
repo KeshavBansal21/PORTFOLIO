@@ -4,7 +4,7 @@
     justify-content: right;
     height: 50px;
     width: 100%;
-    background-color:greenyellow;
+    background-color:#59b256;
     
 }
 .nav-comp1{
@@ -17,3 +17,8 @@
     margin-right: 100px;
 
 }
+
+.bg-myRed{
+    background-color: #59b256;
+}
+

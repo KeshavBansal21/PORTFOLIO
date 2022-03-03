@@ -1,6 +1,7 @@
 .i {
   display: flex;
   height: 100vh;
+  margin-top: 7vh;
 }
 .i-left {
   flex: 1;
@@ -66,6 +67,7 @@
   /* background-size: cover; */
   object-fit: cover;
   position: absolute;
+  /* z-index: ; */
 }
 
 .i-bg {
