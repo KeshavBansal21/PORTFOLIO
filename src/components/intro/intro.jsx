@@ -8,7 +8,7 @@ import Description from "../desciption/description";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { ThemeContext } from "../../context";
-
+import { Spinner } from "react-bootstrap";
 const Intro = (props) => {
   const storeIntroduction = useSelector((store) => store.introduction);
   const dispatch = useDispatch();
@@ -78,9 +78,11 @@ const Intro = (props) => {
     return "";
   };
   const theme = useContext(ThemeContext);
-  const darkMode   =  theme.state.darkMode;
+  const darkMode = theme.state.darkMode;
   return isLoader ? (
-    <h1>...Loading</h1>
+    <div className="Loader">
+      <Spinner animation="grow" variant="success" />
+    </div>
   ) : (
     <div className="i">
       <div className="i-left">
@@ -113,14 +115,14 @@ const Intro = (props) => {
             placeholder={"Your Introduction  , Write here"}
             value={getKeyValue("desc")}
           />
-          {/* <button onClick={onSubmit} className="button">
+          <button onClick={onSubmit} className="button">
             Submit
-          </button> */}
+          </button>
         </div>
       </div>
       <div className="i-right">
         <div className="i-bg"></div>
-        <img src={Me} alt="" className="i-img" ></img>
+        <img src={Me} alt="" className="i-img"></img>
         <IntroReview className={"i-img"}></IntroReview>
         <Description className={"i-desc"}></Description>
       </div>

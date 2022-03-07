@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import ProductList from "./components/productList/ProductList";
 import Contact from "./components/Contact/Contact";
-import Toggle from "./components/toggle/toggle";
+import Toggle from "./components/toggle/toggle";  
 import { ThemeContext } from "./context";
 function App() {
   const theme = useContext(ThemeContext);

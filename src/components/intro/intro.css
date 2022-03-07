@@ -11,6 +11,13 @@
   position: relative;
   /* padding:20px; */
 }
+.Loader{
+  margin-top: 300px;
+  margin-left:700px;
+  height: 20px;
+  width: 50px;
+  /* background-color: black ; */
+}
 .i-left-wrapper {
   padding: 50px;
   /* background-color: red; */

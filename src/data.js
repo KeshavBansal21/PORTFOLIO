@@ -1,33 +1,8 @@
-  import portfolio from "../src/img/portfolio.png"
-export const products = [
-    {
-      id: 1,
-      img: portfolio,
-      link: "http://lama.dev",
-    },
-    {
-      id: 2,
-      img: portfolio,
-      link: "http://lama.dev",
-    },
-    {
-      id: 3,
-      img: portfolio,
-      link: "http://lama.dev",
-    },
-    {
-      id: 4,
-      img:portfolio,
-      link: "http://lama.dev",
-    },
-    {
-      id: 5,
-      img: portfolio,
-      link: "http://lama.dev",
-    },
-    {
-      id: 6,
-      img: portfolio ,
-      link: "http://lama.dev",
-    },
-  ];
+import { collection, getDocs } from "@firebase/firestore";
+import { db } from "./firebase";
+
+export async function getSkills() {
+  const skills = collection(db, "skills");
+  const skillsSnapshot = await getDocs(skills);
+  return skillsSnapshot.docs.map((doc) => doc.data());
+}
