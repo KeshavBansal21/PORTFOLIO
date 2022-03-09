@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { ThemeContext } from "../../context";
 import { Spinner } from "react-bootstrap";
+
 const Intro = (props) => {
   const storeIntroduction = useSelector((store) => store.introduction);
   const dispatch = useDispatch();

@@ -10,7 +10,13 @@ const ProductList = () => {
       setProducts(await getSkills());
     })();
   }, []);
+  
+  console.log(products)
+  products.map((item)=>{
+    console.log(item._fieldsProto.imageurl.stringValue)
+    console.log(item._fieldsProto.name.stringValue)
 
+  })
   return (
     <div className="pl">
       <div className="pl-texts">
@@ -22,7 +28,7 @@ const ProductList = () => {
       </div>
       <div className="pl-list">
         {products.map((item, index) => (
-          <Product key={index} img={item.imageurl} name={item.name}></Product>
+          <Product key={index} img={item._fieldsProto.imageurl.stringValue} name={item._fieldsProto.name.stringValue}></Product>
         ))}
       </div>
     </div>
