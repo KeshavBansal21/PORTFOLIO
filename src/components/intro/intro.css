@@ -63,7 +63,7 @@
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: #59b256;
+  color: base-color;
   display: flex;
   align-items: center;
 }
